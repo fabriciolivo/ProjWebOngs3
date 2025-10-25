@@ -26,10 +26,6 @@ Arquivos
 
 HTML5: Estruturas Semânticas Complexas
 
-Uso obrigatório de tags semânticas (<header>, <nav>, <main>, <section>, <article>, <figure>, <details>, <footer>) e hierarquia de títulos consistente (<h1> ao <h3>). Uso de <fieldset> e <legend> para agrupamento lógico em formulários.
-
-Todos os .html
-
 CSS3: Leiautes Responsivos (Mobile-First)
 
 Uso de CSS Puro, flexbox, grid e media queries com abordagem mobile-first (definições básicas para mobile, ajustes via @media (min-width: 768px) para desktop).
@@ -75,5 +71,3 @@ Iteração 1: Estrutura base e requisitos mínimos (3 páginas e semântica).
 Iteração 2: Design Responsivo (CSS3) e Funcionalidades Essenciais (JS/Máscaras).
 
 Iteração 3: Aprimoramento de Conteúdo, Acessibilidade, SEO e Escopo de Plataforma (versão atual).
-
-Versionamento: Em um ambiente real, todos os arquivos seriam gerenciados via Git, com branches para features e pull requests para integração, garantindo o controle de histórico e a colaboração.
