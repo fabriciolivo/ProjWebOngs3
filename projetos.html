@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Meta Tag otimizada -->
+    <meta name="description" content="Conheça a galeria de projetos e campanhas de arrecadação da ONG Amigos do Planeta. Acompanhe metas e resultados em tempo real.">
+    <title>Projetos e Doações | Amigos do Planeta</title>
+    <link rel="shortcut icon" href="img/icone_aba.png" type="image/png">
+    <!-- Carregamento de fonte Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER - Estrutura Semântica: <header> -->
+    <header>
+        <div class="content container">
+            <a href="index.html" class="logo">
+                Amigos do Planeta
+            </a>
+            <!-- Botão de menu para mobile -->
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- NAV - Estrutura Semântica: <nav> -->
+    <nav id="main-nav" class="mobile-menu-closed">
+        <ul class="container" role="menubar">
+            <li role="none"><a role="menuitem" href="index.html">Institucional</a></li>
+            <li role="none"><a role="menuitem" href="projetos.html" class="active">Projetos e Doações</a></li>
+            <li role="none" class="nav-highlight"><a role="menuitem" href="cadastro.html">Portal do Voluntário</a></li>
+            <li role="none" class="nav-login"><a role="menuitem" href="javascript:void(0)" id="open-login-modal">Login/Área Restrita</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT - Estrutura Semântica: <main> -->
+    <main>
+        <div class="container">
+            <h1 class="h1-center">Galeria de Projetos e Indicadores de Impacto</h1>
+            
+            <!-- Seção de Captação de Recursos: Metas e Progresso em Tempo Real (Requisito Funcional) -->
+            <section id="capitacao-recursos" class="donation-box section-separator bg-green-medium">
+                <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                <h2 class="h2-white-border">Campanha Atual: Reflorestar 2025</h2>
+                <p class="project-lead-text" style="color: var(--color-white);">Ajude-nos a plantar 10.000 árvores este ano. **Seu apoio faz a diferença!**</p>
+                
+                <!-- Mock de Progresso -->
+                <div class="progress-container">
+                    <p class="progress-label">Progresso da Meta (R$):</p>
+                    <div class="progress-track">
+                        <!-- NOTE: The width property must remain inline for the mock visualization of the dynamic progress -->
+                        <div class="progress-bar-inner" style="width: 75%;">
+                            <span class="progress-value">75% (R$ 75.000 / R$ 100.000)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#doacoes" class="btn-secondary-lg">Fazer Doação Online</a>
+            </section>
+
+            <!-- Seção de Gestão de Projetos (Requisito Funcional) -->
+            <section id="projetos-detalhados" class="project-grid">
+                <!-- ESTRUTURA SEMÂNTICA: <article> para projetos individuais -->
+                <article class="project-card border-green" aria-labelledby="reflorestamento-titulo">
+                    <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                    <h2 id="reflorestamento-titulo" class="h2-card-title">Reflorestamento Urbano (Categoria: Biodiversidade)</h2>
+                    
+                    <figure class="figure-compact">
+                        <!-- IMAGEM OBRIGATÓRIA -->
+                        <img src="img/reflorestamento.jpg" 
+                             alt="Voluntários plantando uma muda">
+                    </figure>
+                    
+                    <p class="project-description">Objetivo: Plantar 5.000 mudas em áreas urbanas este ano. Foco na melhoria da qualidade do ar e biodiversidade.</p>
+                    
+                    <!-- Indicadores de Impacto (Mock) -->
+                    <p class="impact-label">Indicadores de Resultados:</p>
+                    <ul class="impact-list">
+                        <li>**Mudas Plantadas:** 3.800 (76% da meta)</li>
+                        <li>**Voluntários Engajados:** 150</li>
+                    </ul>
+                </article>
+
+                <article class="project-card border-blue" aria-labelledby="educacao-titulo">
+                    <h2 id="educacao-titulo" class="h2-card-title">Educação Ambiental (Categoria: Conscientização)</h2>
+                    <figure class="figure-compact">
+                         <!-- IMAGEM OBRIGATÓRIA -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3mXYa0N5t3c?si=WinV8aIbRxcnpqBN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </figure>
+                    <p class="project-description">Objetivo: Desenvolver workshops e materiais para 10.000 estudantes do ensino fundamental.</p>
+
+                    <!-- Indicadores de Impacto (Mock) -->
+                    <p class="impact-label">Indicadores de Resultados:</p>
+                    <ul class="impact-list">
+                        <li>**Estudantes Alcançados:** 7.500 (75% da meta)</li>
+                        <li>**Escolas Parceiras:** 12</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="voluntariado-chamada" class="highlight-voluntario">
+                <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                <h2>Portal de Oportunidades de Voluntariado</h2>
+                <p class="project-lead-text" style="color: var(--color-gray-700);">Candidatar-se a um projeto é fácil e rápido. Seu tempo é nosso maior recurso!</p>
+                
+                <a href="cadastro.html" class="btn-secondary-rounded">
+                    Ver Vagas de Voluntariado
+                </a>
+            </section>
+            
+            <section id="doacoes" class="donation-box">
+                <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                <h2 class="h2-white-dark-border">Sistema de Doações On-line</h2>
+                <p class="project-lead-text" style="color: var(--color-white);">Toda doação é processada de forma segura e transparente, contribuindo diretamente para as metas dos projetos.</p>
+                
+                <!-- ESTRUTURA SEMÂNTICA: <dl> para informações descritivas -->
+                <dl class="donation-grid">
+                    <div class="donation-item">
+                        <dt class="dt-title">Doação por Pix</dt>
+                        <dd class="dd-detail">Chave Pix: contato@amigosdoplaneta.org (E-mail)</dd>
+                    </div>
+                    <div class="donation-item">
+                        <dt class="dt-title">Transferência Bancária</dt>
+                        <dd class="dd-detail">Banco 001 - Agência 1234 - Conta 56789-0 | CNPJ: 00.000.000/0001-00</dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER - Estrutura Semântica: <footer> -->
+    <footer>
+        <div class="content container">
+            <section>
+                <h3>Sobre Nós</h3>
+                <p class="footer-about-text">Promovendo a sustentabilidade e o engajamento cívico através de ações concretas.</p>
+            </section>
+            <section class="h3-spaced">
+                <h3>Navegação Rápida</h3>
+                <ul style="font-size: 0.875rem;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Voluntariado</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="copyright container">© 2025 Amigos do Planeta. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL DE LOGIN (Simulação) -->
+    <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h2 id="modal-title">Acesso Restrito à Plataforma</h2>
+            <button class="modal-close" id="close-modal" aria-label="Fechar janela de login">×</button>
+            <form id="login-form">
+                <div class="modal-form-group">
+                    <label for="username">Usuário (E-mail ou CPF):</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="modal-form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="modal-submit-button">Entrar</button>
+            </form>
+            <p style="text-align: center; font-size: 0.875rem; margin-top: 1rem; color: #718096;">Login para Admin e Colaboradores.</p>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

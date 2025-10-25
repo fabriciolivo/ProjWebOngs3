@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça seu cadastro para se tornar um Voluntário na ONG Amigos do Planeta. Preencha o formulário e participe de projetos de impacto.">
+    <title>Cadastro Voluntário | Amigos do Planeta</title>
+    <link rel="shortcut icon" href="img/icone_aba.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="content container">
+            <a href="index.html" class="logo">
+                Amigos do Planeta
+            </a>
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <nav id="main-nav" class="mobile-menu-closed">
+        <ul class="container" role="menubar">
+            <li role="none"><a role="menuitem" href="index.html">Institucional</a></li>
+            <li role="none"><a role="menuitem" href="projetos.html">Projetos e Doações</a></li>
+            <li role="none" class="nav-highlight"><a role="menuitem" href="cadastro.html" class="active">Portal do Voluntário</a></li>
+            <li role="none" class="nav-login"><a role="menuitem" href="javascript:void(0)" id="open-login-modal">Login/Área Restrita</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="formulario-voluntariado" class="form-section">
+                <!-- HIERARQUIA DE TÍTULOS: H1 -->
+                <h1 class="h1-form-header">Portal de Engajamento de Voluntários</h1>
+                <p class="form-lead-text">Seu cadastro é o primeiro passo para o voluntariado. Preencha o formulário abaixo para iniciarmos o processo de seleção.</p>
+
+                <!-- ESTRUTURA SEMÂNTICA: <form> com validação nativa -->
+                <form id="volunteer-form" class="form-layout" aria-label="Formulário de Inscrição de Voluntário">
+
+                    <!-- AGRUPAMENTO LÓGICO: <fieldset> para Dados Pessoais -->
+                    <fieldset>
+                        <!-- AGRUPAMENTO LÓGICO: <legend> -->
+                        <legend>Dados Pessoais</legend>
+
+                        <div class="form-grid form-grid-2col">
+                            
+                            <!-- Nome Completo (Obrigatório) -->
+                            <div>
+                                <label for="nome">*Nome Completo:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+                                       required minlength="5">
+                            </div>
+                            
+                            <!-- E-mail (Obrigatório, Tipo email com validação) -->
+                            <div>
+                                <label for="email">*E-mail:</label>
+                                <input type="email" id="email" name="email" placeholder="nome@exemplo.com"
+                                       required>
+                            </div>
+
+                            <!-- CPF (Obrigatório, Máscara JS, Validação nativa com pattern) -->
+                            <div>
+                                <label for="cpf">*CPF:</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"
+                                       required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                       title="Formato de CPF deve ser 000.000.000-00">
+                            </div>
+                            
+                            <!-- Telefone (Obrigatório, Tipo tel, Máscara JS, Validação nativa com pattern) -->
+                            <div>
+                                <label for="telefone">*Telefone:</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999"
+                                       required pattern="\(\d{2}\) \d{5}-\d{4}"
+                                       title="Formato de Telefone deve ser (99) 99999-9999">
+                            </div>
+                            
+                            <!-- Data de Nascimento (Obrigatório, Tipo date) -->
+                            <div>
+                                <label for="dataNascimento">*Data de Nascimento:</label>
+                                <input type="date" id="dataNascimento" name="dataNascimento"
+                                       required max="2007-01-01"> <!-- Exemplo de restrição de idade (maior de 18) -->
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- AGRUPAMENTO LÓGICO: <fieldset> para Endereço -->
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        
+                        <!-- Endereço (Obrigatório) -->
+                        <div class="field-group-top">
+                            <label for="endereco">*Endereço (Rua e Número):</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua Exemplo, 123"
+                                   required>
+                        </div>
+
+                        <div class="form-grid form-grid-3col">
+                            
+                            <!-- CEP (Obrigatório, Máscara JS, Validação nativa com pattern) -->
+                            <div>
+                                <label for="cep">*CEP:</label>
+                                <input type="text" id="cep" name="cep" placeholder="00000-000"
+                                       required pattern="\d{5}-\d{3}"
+                                       title="Formato de CEP deve ser 00000-000">
+                            </div>
+                            
+                            <!-- Cidade (Obrigatório) -->
+                            <div>
+                                <label for="cidade">*Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="São Paulo"
+                                       required>
+                            </div>
+                            
+                            <!-- Estado (Obrigatório, Tipo select) -->
+                            <div>
+                                <label for="estado">*Estado:</label>
+                                <select id="estado" name="estado" required class="select-bg-white">
+                                    <option value="">Selecione...</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PR">Paraná</option>
+                                    <!-- Adicione mais estados conforme necessário -->
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Campo Extra para Engajamento/Perfil -->
+                    <fieldset>
+                        <legend>Áreas de Interesse</legend>
+                        <div class="field-group-top">
+                            <label for="areasInteresse">Em qual área gostaria de se voluntariar?</label>
+                            <select id="areasInteresse" name="areasInteresse" class="select-bg-white">
+                                <option value="educacao">Educação Ambiental</option>
+                                <option value="reflorestamento">Reflorestamento/Ação de Campo</option>
+                                <option value="adm">Administrativo/Digital (Home Office)</option>
+                                <option value="outra">Outra (Descreva na mensagem)</option>
+                            </select>
+                        </div>
+                        <div class="field-group-top">
+                            <label for="mensagem">Descreva brevemente suas motivações (Opcional):</label>
+                            <br>
+                            <textarea id="mensagem" name="mensagem" cols="70%" rows="6" placeholder="Por que você quer ser um Amigo do Planeta?"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Botão de Envio (Tipo submit) -->
+                    <div>
+                        <button type="submit" class="submit-button">
+                            Enviar Cadastro e Iniciar Avaliação
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Área de Mensagem (em vez de alert()) -->
+                <div id="form-message" class="message-box hidden" role="alert" aria-live="assertive"></div>
+            </section>
+            
+            <section id="beneficios-voluntario" class="card">
+                <h2>Benefícios do Voluntário Ativo</h2>
+                <p style="margin-bottom: 1rem; color: var(--color-gray-700);">Ao participar da nossa plataforma, você terá acesso à sua **Área do Voluntário**, onde poderá:</p>
+                
+                <ul class="transparency-list" style="list-style: disc;">
+                    <li>Acompanhar **Histórico de Participação** e horas dedicadas.</li>
+                    <li>Emitir **Certificados Digitais** de participação validados.</li>
+                    <li>Candidatar-se a novos projetos e interagir com a equipe.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER - Estrutura Semântica: <footer> -->
+    <footer>
+        <div class="content container">
+            <section>
+                <h3>Sobre Nós</h3>
+                <p class="footer-about-text">Promovendo a sustentabilidade e o engajamento cívico através de ações concretas.</p>
+            </section>
+            <section class="h3-spaced">
+                <h3>Navegação Rápida</h3>
+                <ul style="font-size: 0.875rem;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Voluntariado</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="copyright container">© 2025 Amigos do Planeta. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL DE LOGIN (Simulação) -->
+    <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h2 id="modal-title">Acesso Restrito à Plataforma</h2>
+            <button class="modal-close" id="close-modal" aria-label="Fechar janela de login">×</button>
+            <form id="login-form">
+                <div class="modal-form-group">
+                    <label for="username">Usuário (E-mail ou CPF):</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="modal-form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="modal-submit-button">Entrar</button>
+            </form>
+            <p style="text-align: center; font-size: 0.875rem; margin-top: 1rem; color: #718096;">Login para Admin e Colaboradores.</p>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

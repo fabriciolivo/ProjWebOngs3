@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma digital completa para a ONG Amigos do Planeta. Conheça nossa missão, projetos e relatórios de transparência. Junte-se como voluntário ou apoiador.">
+    <title>Início | Plataforma Amigos do Planeta</title>
+    <link rel="shortcut icon" href="img/icone_aba.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER - Estrutura Semântica: <header> -->
+    <header>
+        <div class="content container">
+            <a href="index.html" class="logo">
+                Amigos do Planeta
+            </a>
+            <!-- Botão de menu para mobile -->
+            <button class="mobile-menu-button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- NAV - Estrutura Semântica: <nav> -->
+    <nav id="main-nav" class="mobile-menu-closed">
+        <ul class="container" role="menubar">
+            <li role="none"><a role="menuitem" href="index.html" class="active">Institucional</a></li>
+            <li role="none"><a role="menuitem" href="projetos.html">Projetos e Doações</a></li>
+            <li role="none" class="nav-highlight"><a role="menuitem" href="cadastro.html">Portal do Voluntário</a></li>
+            <li role="none" class="nav-login"><a role="menuitem" href="javascript:void(0)" id="open-login-modal">Login/Área Restrita</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT - Estrutura Semântica: <main> -->
+    <main>
+        <div class="container">
+            <!-- Área Institucional: Missão, Visão e Valores (Requisito Funcional) -->
+            <section id="institucional" class="card section-separator">
+                <hgroup>
+                    <!-- HIERARQUIA DE TÍTULOS: H1 -->
+                    <h1>Plataforma de Gestão e Engajamento | Amigos do Planeta</h1>
+                    <p class="lead-text">Construindo uma presença digital profissional e transparente para o impacto social.</p>
+                </hgroup>
+                
+                <figure class="figure-margin">
+                    <!-- IMAGEM OBRIGATÓRIA -->
+                    <img src="img/banner_home.png" 
+                         alt="Imagem da colaboração entre humano e planeta" 
+                         class="hero-image">
+                    <figcaption>Histórico e Conquistas: 10 anos de impacto positivo e sustentabilidade.</figcaption>
+                </figure>
+
+                <!-- ESTRUTURA SEMÂNTICA: <article> -->
+                <article>
+                    <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                    <h2>Missão, Visão e Valores</h2>
+                    <p class="body-text-large">Nossa <strong>missão</strong> é conectar a sociedade com a urgência ambiental, promovendo a sustentabilidade através da ação comunitária. Nossa <strong>visão</strong> é ser a ONG referência em gestão transparente e engajamento de voluntários na América Latina. Nossos <strong>valores</strong> se baseiam na Sustentabilidade, Transparência, Inovação e Engajamento Cívico.</p>
+                    
+                    <!-- HIERARQUIA DE TÍTULOS: H3 -->
+                    <h3 class="h3-spaced">Relatórios de Transparência e Prestação de Contas (Requisito Funcional)</h3>
+                    <!-- ESTRUTURA SEMÂNTICA: <details> e <summary> (Comunicação e Transparência) -->
+                    <details class="details-compact">
+                        <summary>Acesse nossos Documentos Públicos</summary>
+                        <ul class="transparency-list">
+                            <li>Relatório Anual de 2024 (PDF ainda não disponível)</li>
+                            <li>Estatuto Social (PDF ainda não disponível)</li>
+                            <li>Balanço Financeiro (PDF ainda não disponível)</li>
+                        </ul>
+                    </details>
+                </article>
+            </section>
+
+            <!-- Seção de Personas e Acesso (Requisito de Personas) -->
+            <section id="acesso-perfis" class="card">
+                <!-- HIERARQUIA DE TÍTULOS: H2 -->
+                <h2>Acessos e Perfis da Plataforma</h2>
+                <p class="body-text-large" style="margin-bottom: 1.5rem;">A plataforma atende a diferentes necessidades. Encontre sua área:</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3 class="text-green-dark">Voluntário</h3>
+                        <p style="font-size: 0.9rem;">Descubra oportunidades e acompanhe seu histórico de participação.</p>
+                        <a href="cadastro.html" class="link-primary">> Entrar no Portal</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-yellow-dark">Apoiador/Doador</h3>
+                        <p style="font-size: 0.9rem;">Realize doações e acompanhe o impacto dos recursos.</p>
+                        <a href="projetos.html#doacoes" class="link-primary">> Acompanhar Doações</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="text-blue-dark">Administrador</h3>
+                        <p style="font-size: 0.9rem;">Gerencie projetos, voluntários e métricas (Acesso Restrito).</p>
+                        <a href="#" id="open-login-modal-footer" class="link-primary">> Login do Administrador</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Informações de Contato mantidas -->
+            <section id="contato" class="card">
+                <h2>Informações de Contato</h2>
+                
+                <address class="contact-grid">
+                    <div class="contact-item">
+                        <h3>E-mail</h3>
+                        <a href="mailto:contato@amigosdoplaneta.org" class="link-primary" style="text-decoration: underline;">contato@amigosdoplaneta.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Telefone</h3>
+                        <p>(11) 98765-4321</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Localização</h3>
+                        <p>Rua da Sustentabilidade, 123 - Centro, São Paulo/SP</p>
+                        <p>CEP: 01001-000</p>
+                    </div>
+                </address>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER - Estrutura Semântica: <footer> -->
+    <footer>
+        <div class="content container">
+            <section>
+                <h3>Sobre Nós</h3>
+                <p class="footer-about-text">Promovendo a sustentabilidade e o engajamento cívico através de ações concretas.</p>
+            </section>
+            <section class="h3-spaced">
+                <h3>Navegação Rápida</h3>
+                <ul style="font-size: 0.875rem;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Voluntariado</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="copyright container">© 2025 Amigos do Planeta. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL DE LOGIN (Simulação) -->
+    <div id="login-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h2 id="modal-title">Acesso Restrito à Plataforma</h2>
+            <button class="modal-close" id="close-modal" aria-label="Fechar janela de login">×</button>
+            <form id="login-form">
+                <div class="modal-form-group">
+                    <label for="username">Usuário (E-mail ou CPF):</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="modal-form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="modal-submit-button">Entrar</button>
+            </form>
+            <p style="text-align: center; font-size: 0.875rem; margin-top: 1rem; color: #718096;">Login para Admin e Colaboradores.</p>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
