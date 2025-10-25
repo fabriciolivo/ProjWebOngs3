@@ -26,7 +26,7 @@ Arquivos
 
 HTML5: Estruturas Semânticas Complexas
 
-Uso obrigatório de tags semânticas (<header>, <nav>, <main>, <section>, <article>, <figure>, <details>, <footer>) e hierarquia de títulos consistente (<h1> a <h3>). Uso de <fieldset> e <legend> para agrupamento lógico em formulários.
+Uso obrigatório de tags semânticas (<header>, <nav>, <main>, <section>, <article>, <figure>, <details>, <footer>) e hierarquia de títulos consistente (<h1> ao <h3>). Uso de <fieldset> e <legend> para agrupamento lógico em formulários.
 
 Todos os .html
 
