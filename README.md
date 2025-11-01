@@ -36,10 +36,15 @@ O arquivo `script.js` concentra as funcionalidades de aprimoramento de usabilida
 A aplicação segue uma arquitetura modular básica de Front-end, mantendo a separação entre estrutura, estilo e lógica:
 
 /plataforma-ongs 
+
 ├── index.html # Página Institucional (Informativa) 
+
 ├── projetos.html # Portal de Projetos e Metas de Doação 
+
 ├── cadastro.html # Portal do Voluntário (Formulário Complexo) 
+
 ├── style.css # Estilos globais (CSS Puro, Responsivo) 
+
 └── script.js # Lógica JavaScript (Máscaras, Validação, Interatividade)
 
 ## 💡 4. Metodologia de Desenvolvimento (Simulação Ágil)
