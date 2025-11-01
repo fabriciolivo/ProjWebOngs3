@@ -1,73 +1,71 @@
-Documentação Técnica: Plataforma Web para ONGs - Amigos do Planeta
+# 🌎 Plataforma Web "Amigos do Planeta"
 
-1. Visão Geral do Projeto
+## 📝 1. Visão Geral do Projeto
 
-Este documento detalha os requisitos técnicos e as soluções aplicadas no desenvolvimento da plataforma web para a ONG "Amigos do Planeta". O projeto visa aplicar, de forma integrada, os conceitos de HTML5, CSS3, e JavaScript, simulando uma entrega profissional orientada a um contexto socialmente relevante.
+Este projeto consiste no desenvolvimento de uma plataforma web institucional para a ONG **"Amigos do Planeta"**. O objetivo foi simular uma entrega profissional de Front-end, aplicando de forma integrada e otimizada os principais conceitos de desenvolvimento web, incluindo semântica, responsividade, interatividade e acessibilidade.
 
-2. Estrutura de Arquivos
+A arquitetura de informação foi desenhada para atender diversas personas (Visitante, Voluntário, Doador e Administrador) em páginas dedicadas.
 
-O projeto utiliza uma estrutura básica de arquivos, adequada para deploy simples e desenvolvimento front-end puro:
+## ✨ 2. Soluções Técnicas e Diferenciais
 
-/
-├── index.html          # Página Institucional (Missão, Visão, Valores, Contato)
-├── projetos.html       # Portal de Projetos (Metas de Doação, Indicadores de Impacto)
-├── cadastro.html       # Portal do Voluntário (Formulário complexo de inscrição)
-├── style.css           # Folha de Estilo: CSS3 Puro e Responsivo
-└── script.js           # Lógica JavaScript: Máscaras de Input e Validação
+O projeto foi construído com uma abordagem **Mobile-First** e foco em alta qualidade técnica:
+
+### 💻 Estrutura e Estilização
+
+| Objetivo | Solução Implementada | Impacto |
+| :--- | :--- | :--- |
+| **HTML5 Semântico** | Uso de tags `<header>`, `<main>`, `<section>`, `<footer>` e elementos de formulário nativos. | Garante melhor legibilidade do código, SEO otimizado e base sólida para Acessibilidade. |
+| **CSS3 Responsivo** | Aplicação de **CSS Puro**, utilizando `flexbox`, `grid` e **Media Queries** com a estratégia *Mobile-First*. | Assegura que o layout e a usabilidade sejam perfeitos em telas de qualquer tamanho, do celular ao desktop. |
+
+### 🚀 Interatividade e Consistência (JavaScript)
+
+O arquivo `script.js` concentra as funcionalidades de aprimoramento de usabilidade e validação:
+
+* **Máscaras de Input:** Implementação de máscaras dinâmicas em JavaScript puro para campos como **CPF**, **Telefone** e **CEP** no formulário de voluntariado.
+
+* **Validação:** Utilização da validação nativa do HTML5 em conjunto com lógica JavaScript para garantir a correta formatação dos dados antes da submissão.
+
+### ♿ Acessibilidade e Otimização
+
+* **Acessibilidade (WCAG 2.1 AA):** Teste de contraste de cores e garantia de navegação por teclado (foco e tabulação). Uso de atributos **ARIA** (`aria-label`, `role`) em elementos interativos.
+
+* **SEO e Descoberta:** Inclusão de meta tags essenciais (`viewport`, `description`) em todas as páginas para otimizar a descoberta em motores de busca.
+
+## 📂 3. Estrutura de Arquivos
+
+A aplicação segue uma arquitetura modular básica de Front-end, mantendo a separação entre estrutura, estilo e lógica:
+
+/plataforma-ongs ├── index.html # Página Institucional (Informativa) ├── projetos.html # Portal de Projetos e Metas de Doação ├── cadastro.html # Portal do Voluntário (Formulário Complexo) ├── style.css # Estilos globais (CSS Puro, Responsivo) └── script.js # Lógica JavaScript (Máscaras, Validação, Interatividade)
+
+## 💡 4. Metodologia de Desenvolvimento (Simulação Ágil)
+
+O desenvolvimento simulou um ambiente profissional, seguindo os princípios de Metodologias Ágeis em três iterações principais:
+
+| Iteração | Foco Principal | Entregáveis |
+| :--- | :--- | :--- |
+| **Iteração 1** | Estrutura Base | 3 páginas HTML com semântica e requisitos mínimos. |
+| **Iteração 2** | Design e Interatividade | Layout Responsivo (CSS3) e Funções Essenciais de Máscaras (JS). |
+| **Iteração 3** | Qualidade e Escopo | Acessibilidade (ARIA), Otimização SEO e Aprimoramento de Conteúdo. |
+
+## 🏃 Como Executar
+
+O projeto é 100% Front-end e pode ser executado diretamente no navegador:
+
+1. **Clone o Repositório:**
+
+git clone https://github.com/fabriciolivo/ProjWebOngs3.git
 
 
-3. Atendimento aos Objetivos Específicos
+2. **Abra o Arquivo:**
 
-Objetivo Específico
+* Navegue até a pasta clonada.
 
-Solução Implementada
+* Abra o arquivo `index.html` em seu navegador de preferência.
 
-Arquivos
+## 🎓 Créditos
 
-HTML5: Estruturas Semânticas Complexas
+Este projeto foi desenvolvido como requisito da disciplina de **Desenvolvimento WEB**.
 
-CSS3: Leiautes Responsivos (Mobile-First)
+* **Desenvolvedor:** Fabricio Gabriel Olivo
 
-Uso de CSS Puro, flexbox, grid e media queries com abordagem mobile-first (definições básicas para mobile, ajustes via @media (min-width: 768px) para desktop).
-
-style.css
-
-JavaScript: Funcionalidades Interativas
-
-Implementação de máscaras de input para CPF, Telefone e CEP (script.js), garantindo a correta formatação dos dados antes da submissão. Validação nativa do HTML5 é utilizada em conjunto com JS.
-
-script.js, cadastro.html
-
-Acessibilidade (WCAG 2.1 AA)
-
-Contraste de cores testado (verde/amarelo em fundo branco/escuro). Navegação por teclado garantida pela estrutura semântica e tabindex padrão. Uso de atributos ARIA (aria-label, role, aria-live) em elementos interativos e estruturais.
-
-Todos os arquivos
-
-SEO e Descoberta
-
-Uso de <meta name="viewport"> e tags de título. Inclusão de <meta name="description"> em todas as páginas para otimizar a descoberta em motores de busca.
-
-Todos os .html
-
-4. Requisitos de Personas e Casos de Uso
-
-A arquitetura de informação do site (navegação e conteúdo) foi pensada para servir as quatro personas principais:
-
-Visitante: Acesso direto às informações institucionais (index.html), projetos (projetos.html) e contato.
-
-Voluntário: Área dedicada com o Formulário de Inscrição (cadastro.html) e chamadas claras para o engajamento.
-
-Doador/Apoiador: Foco na transparência (relatórios em index.html) e captação de recursos com acompanhamento de metas em tempo real (mock em projetos.html).
-
-Administrador: Link de acesso e menção às funcionalidades de gestão (projetos, voluntários, métricas).
-
-5. Metodologia e Versionamento (Simulação)
-
-Para simular um ambiente profissional, o projeto foi desenvolvido seguindo os princípios de Metodologias Ágeis:
-
-Iteração 1: Estrutura base e requisitos mínimos (3 páginas e semântica).
-
-Iteração 2: Design Responsivo (CSS3) e Funcionalidades Essenciais (JS/Máscaras).
-
-Iteração 3: Aprimoramento de Conteúdo, Acessibilidade, SEO e Escopo de Plataforma (versão atual).
+* **Disciplina:** Desenvolvimento WEB - Universidade Positivo
